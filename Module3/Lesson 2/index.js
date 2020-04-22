@@ -63,9 +63,9 @@
 
 
 // =========================================
-// fetch('https://jsonplaceholder.typicode.com/todos')
-//     .then(response => response.json())
-//     .then(json => console.log(json[0].title))
+fetch('https://jsonplaceholder.typicode.com/todos')
+    .then(response => response.json())
+    .then(json => console.log(json))
 // =========================================
 
 // const arr = [[1, 2], [[3, 4], {name: "Alex"}]];
@@ -123,6 +123,13 @@
 
 // todo.editTask(4, 'Hello');
 
+// console.log(window);
+// console.log(document);
 
+// fetch('https://kidslike.herokuapp.com/auth/signup', {
+//     method: "POST",
+//     headers: { 'content-type': 'application/json' },
+//     body: JSON.stringify({ email: "test111111@mail.com", password: "qwer114321" })
+// }).then(res => res.json()).then(resData => console.log('resData', resData));
 
 
