@@ -381,9 +381,10 @@
 // func(array);
 
 
-const obj = {
+// const obj = {
 
-}
-console.dir(obj);
+// }
+// console.dir(obj);
+
 
 
