@@ -177,76 +177,134 @@
 // ========================
 
 
-// game "MARVEL'S HERO"
-// 1. Создаем прототип нашего героя 
-// const Hero = function ({ name = "", health = 100, hitPower = 1.1, speed = 1 }) {
-//     this.name = name;
+// // game "MARVEL'S HERO"
+// // 1. Создаем прототип нашего героя 
+// // const Hero = function ({ name = "", health = 100, hitPower = 1.1, speed = 1 }) {
+// //     this.name = name;
+// //     this.health = health;
+// //     this.hitPower = hitPower;
+// //     this.speed = speed;
+// // }
+// // Hero.prototype.hit = function (hitPower, speed) {
+// //     this.health -= hitPower * speed;
+// // }
+// // // 2. Создаем героев на основе прототипа
+// // const spiderMan = new Hero({ name: "spiderMan", hitPower: 1.3, speed: 2.3 });
+// // const hulk = new Hero({ name: "Hulk", hitPower: 2.3 });
+
+// // // 3. Тестируем возможности наших героев
+// // hulk.hit(spiderMan.hitPower, spiderMan.speed);
+// // hulk.hit(spiderMan.hitPower, spiderMan.speed);
+// // hulk.hit(spiderMan.hitPower, spiderMan.speed);
+// // hulk.hit(spiderMan.hitPower, spiderMan.speed);
+// // hulk.hit(spiderMan.hitPower, spiderMan.speed);
+// // console.log('hulk :', hulk);
+
+// // spiderMan.hit(hulk.hitPower, hulk.speed);
+// // spiderMan.hit(hulk.hitPower, hulk.speed);
+// // spiderMan.hit(hulk.hitPower, hulk.speed);
+// // spiderMan.hit(hulk.hitPower, hulk.speed);
+// // console.log('spiderMan :', spiderMan);
+
+
+
+// const Hero = function ({ health = 100, speed = 1.1, strange = 2 }) {
 //     this.health = health;
-//     this.hitPower = hitPower;
 //     this.speed = speed;
+//     this.strange = strange;
+
+//     // this.hit = function (hit, strange, speed) {
+//     //     this.health = this.health - hit * strange * speed;
+//     // }
 // }
-// Hero.prototype.hit = function (hitPower, speed) {
-//     this.health -= hitPower * speed;
-// }
+
 // // 2. Создаем героев на основе прототипа
-// const spiderMan = new Hero({ name: "spiderMan", hitPower: 1.3, speed: 2.3 });
-// const hulk = new Hero({ name: "Hulk", hitPower: 2.3 });
+
+// const ironMan = new Hero({ health: 100, speed: 1.3, strange: 2 });
+
+// const capAmerica = new Hero({ health: 100, speed: 1.1, strange: 2 })
 
 // // 3. Тестируем возможности наших героев
-// hulk.hit(spiderMan.hitPower, spiderMan.speed);
-// hulk.hit(spiderMan.hitPower, spiderMan.speed);
-// hulk.hit(spiderMan.hitPower, spiderMan.speed);
-// hulk.hit(spiderMan.hitPower, spiderMan.speed);
-// hulk.hit(spiderMan.hitPower, spiderMan.speed);
-// console.log('hulk :', hulk);
 
-// spiderMan.hit(hulk.hitPower, hulk.speed);
-// spiderMan.hit(hulk.hitPower, hulk.speed);
-// spiderMan.hit(hulk.hitPower, hulk.speed);
-// spiderMan.hit(hulk.hitPower, hulk.speed);
-// console.log('spiderMan :', spiderMan);
+// // ironMan.hit(10, capAmerica.strange, capAmerica.speed);
+// // ironMan.hit(10, capAmerica.strange, capAmerica.speed);
+// // capAmerica.hit(20, ironMan.strange, ironMan.speed)
+// // console.log('ironMan :', ironMan);
+// // console.log('capAmerica :', capAmerica);
 
+// // 4. Выносим методы в отдельные функции
 
-
-const Hero = function ({ health = 100, speed = 1.1, strange = 2 }) {
-    this.health = health;
-    this.speed = speed;
-    this.strange = strange;
-
-    // this.hit = function (hit, strange, speed) {
-    //     this.health = this.health - hit * strange * speed;
-    // }
-}
-
-// 2. Создаем героев на основе прототипа
-
-const ironMan = new Hero({ health: 100, speed: 1.3, strange: 2 });
-
-const capAmerica = new Hero({ health: 100, speed: 1.1, strange: 2 })
-
-// 3. Тестируем возможности наших героев
-
+// Hero.prototype.hit = function (hit, strange, speed) {
+//     this.health = this.health - hit * strange * speed;
+// }
+// // console.dir(Hero.prototype);
+// // 5. Тестируем
 // ironMan.hit(10, capAmerica.strange, capAmerica.speed);
 // ironMan.hit(10, capAmerica.strange, capAmerica.speed);
 // capAmerica.hit(20, ironMan.strange, ironMan.speed)
 // console.log('ironMan :', ironMan);
 // console.log('capAmerica :', capAmerica);
 
-// 4. Выносим методы в отдельные функции
-
-Hero.prototype.hit = function (hit, strange, speed) {
-    this.health = this.health - hit * strange * speed;
-}
-// console.dir(Hero.prototype);
-// 5. Тестируем
-ironMan.hit(10, capAmerica.strange, capAmerica.speed);
-ironMan.hit(10, capAmerica.strange, capAmerica.speed);
-capAmerica.hit(20, ironMan.strange, ironMan.speed)
-console.log('ironMan :', ironMan);
-console.log('capAmerica :', capAmerica);
-
 // // game over
 
+
+// ==========================
+// const Hero = function (name, xp) {
+//     this.name = name;
+//     this.xp = xp;
+// };
+
+// // const newHero = new Hero("Alex", 200);
+// // console.log(newHero);
+
+// const Warrior = function (name, xp, weapon) {
+//     this.weapon = weapon;
+//     Hero.call(this, name, xp)
+//     // console.log('this :>> ', this);
+//     // console.log('this :>> ', this);
+//     // this.asdf = new Hero('Poly', 200,)
+//     // Hero.call(this, name, xp);
+//     // console.log('this :>> ', this);
+// };
+// // const warrior = new Warrior("Alex", 200, "sword");
+// // console.log(warrior);
+
+// Hero.prototype.gainXp = function (amount) {
+//     console.log(`${this.name} gained ${amount} experience points`);
+//     this.xp += amount;
+// };
+// // console.dir(Hero);
+
+// const poly = new Warrior('Poly', 200, 'sword');
+
+// Warrior.prototype = Object.create(Hero.prototype);
+// Warrior.prototype.constructor = Warrior;
+
+// console.dir(poly);
+
+
+// console.log(poly);
+
+// Warrior.prototype.attack = function () {
+//     console.log(`${this.name} attacks with ${this.weapon}`);
+// };
+
+// const poly = createObject("Poly", 25, 300);
+// console.log(poly);
+
+// ======================
+
+// const creator = {
+//     name: '',
+//     age: 0,
+//     xp: 0,
+//     createObject( name = 0, age = 0, xp = 200 ) {
+//         return { name, age, xp }
+//     }
+// }
+
+// const newUser = {...creator, ...creator.createObject("Alex", 25, 500)};
+// console.log(newUser);
 
 
 
@@ -268,3 +326,8 @@ console.log('capAmerica :', capAmerica);
 
 
 
+// ======================
+// const obj = {};
+
+// const obj = new Object()
+// console.log(obj)
