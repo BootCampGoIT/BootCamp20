@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">
+        <ul class="list">
+            <li class="listItem actions">Actions</li>
+            <li class="listItem rpg">RPG</li>
+            <li class="listItem">Strategy</li>
+            <li class="listItem newProduct">Create new product</li>
+            <li class="listItem">Cart</li>
+          </ul>
+    </div>
+    <form class="productForm">
+      <div class="column">
+          <select name="category" id="category">
+              <option value="action">Action</option>
+              <option value="rpg">RPG</option>
+              <option value="strategy">Strategy</option>
+          </select>
+        <input type="text" class="productTitle" placeholder="title" />
+        <input type="text" class="productIMG" placeholder="img" /> 
+        <input type="text" class="productPrice" placeholder="price" />
+        <button class="addProduct">Add product</button>  
+    </div>
+        <textarea
+          name="productDescription"
+          id=""
+          cols="30"
+          rows="10"
+          class="productDescription"
+          placeholder="description"
+        ></textarea>
+    </form>
+
+    <ul class="productList"></ul>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
