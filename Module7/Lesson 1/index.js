@@ -1,22 +1,22 @@
-// console.dir(document);
+console.dir(document);
 
-// const body = document.querySelector('body');
-// const list = document.querySelectorAll('.listItem');
-// console.log([...list]);
+const body = document.querySelector('body');
+const list = document.querySelectorAll('.listItem');
+console.log([...list]);
 
-// mainTitle.textContent = "BOM"
-// body.style.backgroundColor = 'black';
+mainTitle.textContent = "BOM"
+body.style.backgroundColor = 'black';
 
-// const array = ['Home', 'About', 'Contacts'];
+const array = ['Home', 'About', 'Contacts'];
 
-// // let markup = '<li class="listItem">Home</li><li class="listItem">About</li><li class="listItem">Contacts</li>';
+// let markup = '<li class="listItem">Home</li><li class="listItem">About</li><li class="listItem">Contacts</li>';
 
-// const markup = array.reduce((acc, item) => {
-//     return acc += `<li class="listItem">${item}</li>`
-// }, '');
-// console.log(markup);
+const markup = array.reduce((acc, item) => {
+    return acc += `<li class="listItem">${item}</li>`
+}, '');
+console.log(markup);
 
-// list.innerHTML = markup;
+list.innerHTML = markup;
 
 // =======================
 
@@ -162,8 +162,6 @@
 // console.log([...all].map(item=> item.textContent));
 
 
-
-
 // ================= FRAGMENT =============
 // const data = [1, 2, 3, 4, 5, 6, 7]
 
@@ -181,37 +179,38 @@
 
 // ============================
 
-const component = {
-    users: [],
-    refs: {
-        email: document.querySelector('.email'),
-        name: document.querySelector('.name'),
-        password: document.querySelector('.password'),
-        modal: document.querySelector('.modal'),
-        signUpForm: document.querySelector('.signUpForm'),
-        addButton: document.querySelector('.addButton')
-    },
-    modalHandler() {
-        this.refs.signUpForm.classList.toggle('openModal');
-    },
-    createNewUser(event) {
-        const { email, name, password } = this.refs;
-        event.preventDefault();
-        const newUser = {
-            email: email.value,
-            name: name.value,
-            password: password.value,
-        }
-        this.users.push(newUser);
-        this.refs.signUpForm.reset();
-        console.log(this.users);
-        this.modalHandler();
-    },
-}
+// const component = {
+//     users: [],
+//     refs: {
+//         email: document.querySelector('.email'),
+//         name: document.querySelector('.name'),
+//         password: document.querySelector('.password'),
+//         modal: document.querySelector('.modal'),
+//         signUpForm: document.querySelector('.signUpForm'),
+//         addButton: document.querySelector('.addButton')
+//     },
+//     modalHandler() {
+//         this.refs.signUpForm.classList.toggle('openModal');
+//     },
+//     createNewUser(event) {
+//         const { email, name, password } = this.refs;
+//         event.preventDefault();
+//         const newUser = {
+//             email: email.value,
+//             name: name.value,
+//             password: password.value,
+//         }
+//         this.users.push(newUser);
+//         this.refs.signUpForm.reset();
+//         console.log(this.users);
+//         this.modalHandler();
+//     },
+// }
 
-component.refs.modal.addEventListener('click', component.modalHandler);
-component.refs.addButton.addEventListener('click', component.createNewUser);
+// component.refs.modal.addEventListener('click', component.modalHandler);
+// component.refs.addButton.addEventListener('click', component.createNewUser);
 
+// -----------------------------------------------------
 
 
 
