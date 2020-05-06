@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =======header==== */
+.header {
+  height: 25px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+
+/* ------- logo ------------ */
+.logo {
+  height: 20px;
+  width: 60px;
+  position: relative;
+  cursor: pointer;
+}
+
+.logoIcon {
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+/* ------- navigation ------------ */
+.navigationList {
+  list-style: none;
+  display: flex;
+}
+.js-navigationListItem {
+  color: white;
+  margin: 0 10px;
+}
+
+.activeNavigationItem {
+  color: red;
+}
+
+/* ------ user -------------- */
+.user {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+}
+
+.userIcon {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+/* ======= content =============== */
+.container {
+
+}
+
+/* ----- genres ------------ */
+.gamesGenresList {
+  height: calc(100vh - 25px);
+  width: 150px;
+  background-color: grey;
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+}
+
+/* ------- game items ---------- */
+.gamesItemsList {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+/* ============= form =============== */
+
+.itemCreaterForm {
+  margin: 10px 10px;
+  display: flex;
+  width: 400px;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.formColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.addNewAdv {
+padding: 2px;
+}
+
+
+.border {
+  border-color: red;
+}
