@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- ================ header =================== -->
+    <header>
+      <div class="header">
+        <div class="logo"><img src="./assets/header_logo.png" alt="Steam" class="logoIcon" /></div>
+        <nav class="navigation"><ul class="navigationList"></ul></nav>
+        <div class="user"><img src="./assets/anonymous.png" alt="userPicture" class="userIcon" /></div>
+      </div>
+    </header>
+    <!-- ==================== content =================== -->
+    <main>
+      <div class="container">
+        <!-- ---------------- adv page -------------------- -->
+        <div class="myAdvPage">
+          <div class="options">
+            <button class="addNewAdv">Добавить новое объявление</button>
+
+            <!-- ---------- serchForm ----------- -->
+            <div class="searchBlock">
+              <img src="./assets/search.png" alt="searchIcon" class="searchIcon" />
+              <form class="searchForm" name="searchForm">
+                <input type="text" class="filter" name="filter" placeholder="search" />
+              </form>
+            </div>
+          </div>
+
+          <!-- ---------- newAdvForm ----------- -->
+          <form class="itemCreaterForm hide" name="itemCreaterForm">
+            <div class="formColumn">
+              <input type="text" class="itemCreaterFormTitle" name="title" placeholder="title" />
+              <input type="text" class="itemCreaterFormAnchor" name="anchor" placeholder="anchor" />
+              <input type="text" class="itemCreaterFormPrice" name="price" placeholder="price" />
+              <button class="addNewItem" type="submit">Сохранить</button>
+            </div>
+            <textarea
+              class="itemCreaterFormDescription"
+              name="description"
+              placeholder="description"
+              id=""
+              cols="30"
+              rows="10"
+            ></textarea>
+          </form>
+
+          <!-- ------------- searchResult list ------------------ -->
+          <ul class="myAdviseList"></ul>
+        </div>
+        <!-- -------------- games page ------------------------ -->
+        <div class="gamePage">
+          <ul class="gamesGenresList hide"></ul>
+          <ul class="gamesItemsList"></ul>
+        </div>
+
+        <!-- -------------------- programs page ----------------------- -->
+      </div>
+    </main>
+
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
