@@ -3,8 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: darkgrey;
+}
 
-/* =======header==== */
+/* ======= header ==== */
 .header {
   height: 25px;
   background-color: black;
@@ -12,6 +15,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 5px;
+
+  box-shadow: 0px 0px 29px 7px rgba(0, 0, 0, 0.75);
 }
 
 /* ------- logo ------------ */
@@ -38,10 +43,7 @@
 .js-navigationListItem {
   color: white;
   margin: 0 10px;
-}
-
-.activeNavigationItem {
-  color: red;
+  cursor: pointer;
 }
 
 /* ------ user -------------- */
@@ -65,20 +67,75 @@
 
 /* ======= content =============== */
 .container {
+}
 
+/* ----------- adsPage ------------------- */
+.myAdviseList {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.addNewAdv {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 0 5px;
+  margin: 5px;
+  height: 22px;
+  outline: none;
+}
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.filter {
+  border: 1px solid black;
+  border-radius: 4px;
+  outline: none;
+  height: 22px;
+  padding-left: 20px;
+}
+
+.filter::placeholder {
+  color: red;
+  opacity: 0.3;
+  font-style: italic;
+}
+
+.searchBlock {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+.searchIcon {
+  position: absolute;
+  height: 15px;
+  left: 4px;
+  z-index: 99;
 }
 
 /* ----- genres ------------ */
 .gamesGenresList {
   height: calc(100vh - 25px);
   width: 150px;
-  background-color: grey;
+  background-color: black;
   display: flex;
   list-style: none;
   flex-direction: column;
+  padding: 5px;
+}
+.js-gamesGenresListItem {
+  color: white;
+  cursor: pointer;
+  margin: 5px 0;
+  font-size: 12px;
+  margin-left: 10px;
 }
 
-/* ------- game items ---------- */
+/* ------- game page ---------- */
 .gamesItemsList {
   width: 100%;
   display: flex;
@@ -87,14 +144,15 @@
 }
 
 /* ============= form =============== */
-
 .itemCreaterForm {
-  margin: 10px 10px;
+  margin: 5px 5px;
   display: flex;
   width: 400px;
   height: 150px;
   padding: 10px;
   border: 1px solid black;
+  border-radius: 4px;
+  background-color: grey;
 }
 
 .formColumn {
@@ -104,15 +162,79 @@
   margin-right: 10px;
 }
 
+.itemCreaterFormDescription,
+.itemCreaterFormTitle,
+.itemCreaterFormPrice,
+.itemCreaterFormAnchor,
+.addNewItem {
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+}
+.itemCreaterFormDescription::placeholder,
+.itemCreaterFormTitle::placeholder,
+.itemCreaterFormPrice::placeholder,
+.itemCreaterFormAnchor::placeholder {
+  color: red;
+  opacity: 0.3;
+  font-style: italic;
+}
+
 .hide {
-    display: none;
+  display: none;
+}
+.activeNavigationItem {
+  color: red;
 }
 
-.addNewAdv {
-padding: 2px;
+/* ================= items ================ */
+.listItem {
+  position: relative;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 5px;
+  padding: 5px;
+  width: 150px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+.listItem:hover {
+  transform: scale(1.05);
+  border: 2px solid red;
 }
 
-
-.border {
-  border-color: red;
+.listItemTitle {
+  font-size: 12px;
+  margin-bottom: 2px;
 }
+.listItemDescription {
+  width: 100%;
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+.listItemImage {
+  width: 140px;
+  margin-bottom: 2px;
+}
+
+.listItemPrice {
+  position: absolute;
+  align-self: flex-start;
+  font-size: 12px;
+  bottom: 30px;
+}
+.listItemaddButton {
+  position: absolute;
+  padding: 4px;
+  font-size: 12px;
+  bottom: 5px;
+  border: 1px solid black;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* ============== / items ================== */

@@ -8,6 +8,7 @@
   </head>
 
   <body>
+    <!-- ================ header =================== -->
     <header>
       <div class="header">
         <div class="logo"><img src="./assets/header_logo.png" alt="Steam" class="logoIcon" /></div>
@@ -15,21 +16,33 @@
         <div class="user"><img src="./assets/anonymous.png" alt="userPicture" class="userIcon" /></div>
       </div>
     </header>
+    <!-- ==================== content =================== -->
     <main>
       <div class="container">
-        <div class="myAdvPage hide">
-          <button class="addNewAdv">Create new adv</button>
-          <ul class="myAdviseList"></ul>
+        <!-- ---------------- myAdvPage -------------------- -->
+        <div class="myAdvPage">
+          <div class="options">
+            <button class="addNewAdv">Добавить новое объявление</button>
+            <div class="searchBlock">
+              <img src="./assets/search.png" alt="searchIcon" class="searchIcon">
+              <form class="searchForm" name="searchForm">
+                <input type="text" class="filter" name="filter" placeholder="search">
+              </form>
+            </div>
+          </div>
           <form class="itemCreaterForm hide" name="itemCreaterForm">
             <div class="formColumn">
-              <!-- <select name="" id=""></select>  add options from data-->
-              <input type="text" name="title" placeholder="title" /> <input type="text" name="anchor" placeholder="anchor" />
-              <input type="text" name="price" placeholder="price" /> <button class="addNewItem" type="submit">Cretate</button>
+              <input type="text" class="itemCreaterFormTitle" name="title" placeholder="title" /> 
+              <input type="text" class="itemCreaterFormAnchor" name="anchor" placeholder="anchor" />
+              <input type="text" class="itemCreaterFormPrice" name="price" placeholder="price" /> 
+              <button class="addNewItem" type="submit">Сохранить</button>
             </div>
-            <textarea name="description" placeholder="description" id="" cols="30" rows="10"></textarea>
+            <textarea class="itemCreaterFormDescription" name="description" placeholder="description" id="" cols="30" rows="10"></textarea>
           </form>
+         
+          <ul class="myAdviseList"></ul>
         </div>
-        <!-- ============ page ============ -->
+        <!-- -------------- games page ------------------------ -->
         <div class="gamePage">
           <ul class="gamesGenresList hide"></ul>
           <!-- <ul class="gamesItemsList"></ul> -->

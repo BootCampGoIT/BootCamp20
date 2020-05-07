@@ -1,16 +1,23 @@
 export function getMarkup(dist, data) {
-    const markup = data.map(item => `<li class="js-${dist.className}Item" data-id=${item.id}>${item.title}</li>`).join(''); //[]
-    dist.insertAdjacentHTML('afterbegin', markup);
+    const className = dist.className.split(' ')[0]
+    const markup = data.map(item => {
+        return `<li 
+        class="js-${className}Item ${(item.id === '1')?'activeNavigationItem':''}" 
+        data-id=${item.id}>${item.title}
+        </li>`
+    }).join(''); //[]
+    dist.innerHTML = markup;
 }
 
 export function getListItems(dist, data) {
     const markup = data.map(item => `
-    <li class="js-${dist.className}Item" data-id=${item.id}>
-    <h3>${item.title}</h3>
-    <img src=${item.anchor} alt=${item.title} >
-    <p>${item.description}</p> 
-    <p>${item.price}</p> 
+    <li class="listItem js-${dist.className}Item" data-id=${item.id}>
+    <h3 class="listItemTitle">${item.title}</h3>
+    <img class="listItemImage" src=${item.anchor} alt=${item.title} >
+    <p class="listItemDescription"><b>Описание:</b> ${item.description}</p> 
+    <p class="listItemPrice"><b>Цена: </b> ${item.price} грн.</p> 
+    <button class="listItemaddButton">Добавить в корзину</button> 
     </li>
     `).join(''); //[]
-    dist.insertAdjacentHTML('afterbegin', markup);
+    dist.innerHTML = markup;
 }
