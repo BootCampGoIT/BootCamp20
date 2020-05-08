@@ -6,7 +6,7 @@ import form from '../forms/form.js';
 const AdsPage = () => {
     form();
 
-    
+
     const myAdviseList = document.querySelector('.myAdviseList');
     getListItems(myAdviseList, myAdviseData);
 }

@@ -6,7 +6,7 @@ const Header = () => {
     const myAdvPage = document.querySelector('.myAdvPage');
     const gamesGenresList = document.querySelector('.gamesGenresList');//
 
-    function openGengresPage(e) {
+    const openGengresPage = (e) => {
         if (e.target === e.currentTarget) {
             return
         }

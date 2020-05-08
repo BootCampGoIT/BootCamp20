@@ -5,7 +5,7 @@ const form = () => {
     const addNewAdv = document.querySelector('.addNewAdv');
 
 
-    function toggleStateForm() {
+    const toggleStateForm = () => {
         itemCreaterForm.classList.toggle('hide');
     }
 

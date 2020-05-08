@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navLink {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.activeNavLink {
+    background-color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    border-radius: 5px;
+}
+
+.navLink a {
+    padding: 5px;
+    width: 100px;
+    text-decoration: none;
+    color: white;
+}
+
+/* =========== product form ======== */
+.productForm {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.productList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.productItem {
+    background-color: white;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 100px;
+}
+
+.formInput {
+    margin: 0 10px;
+    width: 150px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.formButton {
+    margin: 0 10px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    color: white;
+    cursor: pointer;
+}
+
+.cardButton {
+    padding: 5px;
+    width: 70px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* ========== pagination ======== */
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pag {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.activePag {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+/* ========= throttle =============== */
+.activeButton {
+    background-color: red;
+    border: none;
+    outline: none;
+}
+
+/* ======= observer  ===========*/
+.observer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: black;
+    height: 100px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    padding: 5px;
+}
+
+.observer a {
+    text-decoration: none;
+    color: white;
+}
+
+.mainBlock {
+    background-color: white;
+    width: 60%;
+    margin-left: 20%;
+    text-align: justify;
+}
+
+
+.activeTitle {
+    color: red
+}
